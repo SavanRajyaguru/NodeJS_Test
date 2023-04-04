@@ -1,0 +1,3 @@
+Hear is the RESULT: 
+hello this is the first file. 
+hello this is the second text file;
