@@ -1,5 +1,5 @@
 const { readFileSync, writeFileSync, readFile, writeFile } = require("fs");
-// const util = require("util");
+const util = require("util");
 
 /// ------ start fs sync module -------
 
