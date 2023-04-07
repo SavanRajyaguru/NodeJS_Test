@@ -5,7 +5,7 @@ const authorize = require("./authorize");
 
 /// req => middleware => res
 
-app.use([authorize, logger]);
+app.use("/api", [authorize, logger]);
 
 app.get("/", (req, res) => {
   console.log(req.user);
