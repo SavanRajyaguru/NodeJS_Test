@@ -1,17 +1,9 @@
-const express = require("express");
-const app = new express();
+const http = require("http");
 
-const data = [
-  { id: 1, name: "savan" },
-  { id: 2, name: "demo" },
-  { id: 3, name: "demo1" },
-];
-app.get("/", (req, res) => {
-  res.send("<h1>Savan Rajyaguru</h1>");
-});
-
-app.get("/api/data", (req, res) => {
-  res.send(data);
-});
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server is running... ${port}`));
+const server = http
+  .createServer((req, res) => {
+    res.writeHead(200, { "content-type": "text/html" });
+    res.write("<h1>Hello world</h1>");
+    res.end();
+  })
+  .listen(5000, () => console.log("Server is running..."));
