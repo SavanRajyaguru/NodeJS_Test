@@ -3,7 +3,7 @@ const app = express();
 const logger = require("./logger");
 const authorize = require("./authorize");
 
-/// req => middleware => res
+// TODO: req => middleware => res
 
 app.use("/api", [authorize, logger]);
 
